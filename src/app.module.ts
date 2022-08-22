@@ -13,7 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       host: 'awseb-e-ck3n9vav3v-stack-awsebrdsdatabase-v2cpjxmmsrgn.cuxcfcofxlzj.ap-south-1.rds.amazonaws.com',
       port: 3306,
       username: 'premBaghel',
-      password: 'ghantya123$',
+      password: 'ghantya123',
       database: 'employee',
       dropSchema: true,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
