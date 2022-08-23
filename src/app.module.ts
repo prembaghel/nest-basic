@@ -6,21 +6,26 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
-    ContactsModule,
-  //   TypeOrmModule.forRoot({
-  //     //type: 'sqlite',
-  //     type: 'mysql',
-  //     host: 'awseb-e-ck3n9vav3v-stack-awsebrdsdatabase-v2cpjxmmsrgn.cuxcfcofxlzj.ap-south-1.rds.amazonaws.com',
-  //     port: 3306,
-  //     username: 'premBaghel',
-  //     password: 'ghantya123',
-  //     database: 'employee',
-  //     dropSchema: true,
-  //     entities: [__dirname + '/**/*.entity{.ts,.js}'],
-  //     synchronize: true,
-  //     debug: true,
-  //     logging: true,
-  //  }),
+    
+    TypeOrmModule.forRoot({
+      //type: 'sqlite',
+      type: 'mysql',
+      port: 3306,
+      
+      // host: 'localhost',
+      // username: 'root',
+      // password: 'Sql@root123$',
+      // database: 'EMPLOYEE',
+      
+      host: 'awseb-e-ck3n9vav3v-stack-awsebrdsdatabase-v2cpjxmmsrgn.cuxcfcofxlzj.ap-south-1.rds.amazonaws.com',
+      username: 'premBaghel',
+      password: 'ghantya123$',
+      database: 'ebdb',
+      
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      debug: true,
+      logging: true,
+   }), ContactsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
